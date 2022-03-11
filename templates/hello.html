@@ -1,0 +1,60 @@
+<!-- author ben lawson (balawson@bu.edu) -->
+<!doctype html>
+{% if message %}
+  <h4>{{message}}!</h4>
+{% endif %}
+<title>Photoshare</title>
+{% if name %}
+  <h1>Hello {{ name }}!</h1>
+{% endif %}
+
+{% if photos %}
+<h2>Here are your photos</h2>
+    <ul>
+    {% for photo in photos %}
+        <p>CAPTION: </p>
+        <li>{{photo[2]}}<br>
+        <img src='data:image/jpg;base64, {{ base64.b64encode(photo[0]).decode("ascii") }}'/></li>
+    {% endfor %}
+    </ul>
+{% endif %}
+
+
+{% if friends %}
+<h2>Here's your friends</h2>
+    <ul>
+    {% for friend in friends %}
+	   <li><a href="">{{friend}}</a></li>
+    {% endfor %}
+    </ul>
+	{% endif %}
+
+{% if comments %}
+<h2>Here's your comments</h2>
+    <ul>
+    {% for comment in comments %}
+	   <li><a href="">{{comment}}</a></li>
+    {% endfor %}
+    </ul>
+	{% endif %}
+
+
+
+{% if message is none %}
+  <p>You should <a href='/login'>login!</a></p>
+{% else %}
+  <p> Go to <a href='/profile'>profile?</a></p>
+{% endif %}
+
+<ul>
+<li><a href='/write_comments'> Write Comments</a></li>
+<li><a href='/show_comments'> Show Comments</a></li>
+<li><a href='/recommendation'> recommendation</a></li>
+<li><a href='/see_all_photos'> See all photos</a></li>
+<li><a href='/delete_photo'> Delete a photo</a></li> 
+<li><a href='/upload'>Upload a photo</a> </li>
+<li><a href='/create_an_album'> Create an album</a></li>
+<li><a href='/logout'>Logout</a></li>
+<li><a href='/add_friend'> Add friends</a></li>
+<li><a href='/'>Home</a></li>
+</ul>

@@ -1,0 +1,20 @@
+<head>
+    <title>Write Comments!</title>
+</head>
+    <body>
+        <div class="title">
+            <h1>Write Comments</h1>
+        </div>
+            <form method="post" action="/write_comments">
+                <label for="photo_id">Enter photo ID: </label>
+                <input type="number" name="photo_id" required='true' /><br />
+                
+                <label for="text">Enter the comments: </label>
+                <input type="text" name="text" required='true' /><br />
+                
+                <label for="date">Enter today's date: </label>
+                <input type="date" name="date" required='true' /><br />
+                
+                <input type="submit" value = "Submit!" />
+            </form>
+    </body>

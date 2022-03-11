@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>The comments</title>
+
+  </head>
+  <body>
+    
+      <h1> Show all comments for photo ID {{photoID}}------OWNED by {{owner}}</h1>
+      
+      <ul>
+      {% for i in comment %}
+      <li> {{i}} </li>
+      {% endfor %}
+      </ul>
+    
+  </body>
+</html>
+
+
+
+<ul>
+<li><a href='/write_comments'> Write Comments</a></li>
+<li><a href='/show_comments'> Show Comments</a></li>
+<li><a href='/see_all_photos'> See all photos</a></li>
+<li><a href='/delete_photo'> Delete a photo</a></li> 
+<li><a href='/upload'>Upload a photo</a> </li>
+<li><a href='/create_an_album'> Create an album</a></li>
+<li><a href='/logout'>Logout</a></li>
+<li><a href='/add_friend'> Add friends</a></li>
+<li><a href='/'>Home</a></li>
+</ul>
